@@ -130,7 +130,7 @@ void LCD_setline (char line)
         LCD_sendbyte(0x80,0);//Send 0x80 to set line to 1 (0x00 ddram address), 0x80 is 128
     }
     if (line==2){
-        LCD_sendbyte(0x40,0);//Send 0xC0 to set line to 2 (0x40 ddram address), 0xC0 is 192
+        LCD_sendbyte(0xC0,0);//Send 0xC0 to set line to 2 (0x40 ddram address), 0xC0 is 192
     }
 }
 
