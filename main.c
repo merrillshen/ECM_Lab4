@@ -14,28 +14,91 @@
 
 void main(void) {
     LCD_Init();
-    ADC_init();
-    char *buf;
-    char num;
+    LCD_setline(1);
+    LCD_sendbyte(0b00101111,1); // "/"
+    LCD_sendbyte(0b01011100,1); //"\"
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00101111,1); // "/"
+    LCD_sendbyte(0b01011100,1); //"\"
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00101111,1); // "/"
+    LCD_sendbyte(0b01011100,1); //"\"
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00101111,1); // "/"
+    LCD_sendbyte(0b01011100,1); //"\"
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00101111,1); // "/"
+    LCD_sendbyte(0b01011100,1); //"\"
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00101111,1); // "/"
+    LCD_sendbyte(0b01011100,1); //"\"
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00101111,1); // "/"
+    LCD_sendbyte(0b01011100,1); //"\"
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00101111,1); // "/"
+    LCD_sendbyte(0b01011100,1); //"\"
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00101111,1); // "/"
+    LCD_sendbyte(0b01011100,1); //"\"
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00101111,1); // "/"
+    LCD_sendbyte(0b01011100,1); //"\"
+    LCD_sendbyte(0b00100000,1); // " "
+    
+    LCD_setline(2);
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b01011100,1); //"\"
+    LCD_sendbyte(0b00101111,1); // "/"
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b01011100,1); //"\"
+    LCD_sendbyte(0b00101111,1); // "/"
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b01011100,1); //"\"
+    LCD_sendbyte(0b00101111,1); // "/"
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b01011100,1); //"\"
+    LCD_sendbyte(0b00101111,1); // "/"
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b01011100,1); //"\"
+    LCD_sendbyte(0b00101111,1); // "/"
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b01011100,1); //"\"
+    LCD_sendbyte(0b00101111,1); // "/"
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b01011100,1); //"\"
+    LCD_sendbyte(0b00101111,1); // "/"
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b01011100,1); //"\"
+    LCD_sendbyte(0b00101111,1); // "/"
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b01011100,1); //"\"
+    LCD_sendbyte(0b00101111,1); // "/"
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b00100000,1); // " "
+    LCD_sendbyte(0b01011100,1); //"\"
+    LCD_sendbyte(0b00101111,1); // "/"
 
-	/*
-	LCD_setline(1); //Set Line 1
-	LCD_sendbyte(0x48,1); //H
-	LCD_sendbyte(0x65,1); //E
-	LCD_sendbyte(0x6C,1); //L	
-	LCD_sendbyte(0x6C,1); //L
-	LCD_sendbyte(0x6F,1); //O
-	LCD_sendbyte(0x20,1); //(space)
-	LCD_sendbyte(0x57,1); //W
-	LCD_sendbyte(0x6F,1); //O
-	LCD_sendbyte(0x72,1); //R
-	LCD_sendbyte(0x6C,1); //L 
-	LCD_sendbyte(0x64,1); //D
-	LCD_sendbyte(0x21,1); //!
-*/
     while (1) {
-        buf = &num;
-        ADC2String(buf, ADC_getval());
+        LCD_scroll();
     }
 }
 
