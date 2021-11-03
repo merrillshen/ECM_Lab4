@@ -165,11 +165,11 @@ void LCD_scroll(void)
 void ADC2String(char *buf, unsigned int ADC_val){
 	//code to calculate the inegeter and fractions part of a ADC value
 	// and format as a string using sprintf (see GitHub readme)
-//    unsigned int int_part;
-//    unsigned int frac_part;
-//    int_part=ADC_val/51;
-//    frac_part=(ADC_val*100)/51 - int_part*100;
-    sprintf(buf," Value is %d",ADC_val);
+    unsigned int int_part;
+    unsigned int frac_part;
+    int_part=ADC_val/51;
+    frac_part=(ADC_val*100)/51 - int_part*100;
+    sprintf(buf," Value is %d.%02dV",int_part, frac_part);
     LCD_sendstring(buf);
     __delay_ms(250);
     LCD_sendbyte(0b00000001, 0);
