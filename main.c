@@ -12,8 +12,9 @@
 #define _XTAL_FREQ 64000000 //note intrinsic _delay function is 62.5ns at 64,000,000Hz  
 
 void main(void) {
-    LCD_Init();  
-	
+    LCD_Init();
+    LCD_sendstring("Hello World!");
+	/*
 	LCD_setline(1); //Set Line 1
 	LCD_sendbyte(0x48,1); //H
 	LCD_sendbyte(0x65,1); //E
@@ -27,9 +28,9 @@ void main(void) {
 	LCD_sendbyte(0x6C,1); //L 
 	LCD_sendbyte(0x64,1); //D
 	LCD_sendbyte(0x21,1); //!
-
+*/
     while (1) {
-
+ 
     }
 }
 

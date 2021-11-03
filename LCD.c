@@ -140,6 +140,9 @@ void LCD_setline (char line)
 void LCD_sendstring(char *string)
 {
 	//code here to send a string to LCD using pointers and LCD_sendbyte function
+    while(*string != 0){ //While the data pointed to isn't a 0x00 do below (strings in C must end with a NULL byte) 
+        LCD_sendbyte(*string++, 1); //Send out the current byte pointed to and increment the pointer
+    }
 }
 
 /************************************
