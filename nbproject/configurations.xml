@@ -15,6 +15,8 @@
       <itemPath>LCD.c</itemPath>
       <itemPath>LCD.h</itemPath>
       <itemPath>main.c</itemPath>
+      <itemPath>ADC.c</itemPath>
+      <itemPath>ADC.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
